@@ -1,4 +1,5 @@
 $lightblack: #2C3032;
+$logo-width: 150px;
 
 .login-form {
   position: relative;
@@ -6,8 +7,8 @@ $lightblack: #2C3032;
   margin: 0 auto;
   max-width: 350px;
   img {
-      margin: 0 auto;
-      width: 100%;
+    margin: 0 auto;
+    width: 100%;
   }
   input, a {
     border-radius: 0px;
@@ -23,4 +24,58 @@ $lightblack: #2C3032;
     text-decoration: underline;
     padding: 5px 0;
   }
+}
+nav.navbar.navbar-default.navbar-static-top {
+  margin-bottom: 0;
+  border-bottom-color: black;
+  background-color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  a {
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .navLogo {
+    bottom: 21px;
+    background: white;
+    position: relative;
+    width: $logo-width;
+    border-radius: 45%;
+    z-index: 999;
+  }
+  a.logout {
+    color: #D43351;
+  }
+  .navbar-divider {
+      display: none;
+  }
+  @media only screen and (max-width: 767px) {
+    .navbar-brand {
+      position: absolute;
+      left: 50%;
+      top: 0px;
+      margin-left: -$logo-width/2;
+      .navLogo {
+        background: transparent;
+      }
+    }
+  }
+  @media only screen and (min-width: 767px) {
+    .navbar-divider {
+      color: #ddd;
+      display: block;
+      float: left;
+      padding: 5px 5px 0px;
+      font-weight: 300;
+      font-size: 26px;
+    }
+  }
+}
+
+.porscheBackground {
+  background: url('../images/red-porche.png');
+  background-position: 100% -1px;
+  background-repeat: no-repeat;
+  height: 500px;
 }
