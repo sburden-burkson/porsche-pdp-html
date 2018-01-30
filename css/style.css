@@ -3,13 +3,86 @@
   src: url("../fonts/PorscheNextTT-Bold.ttf");
 }
 
-* {
+nav, .contentWrap {
   letter-spacing: 1px;
+}
+
+.dataTables_info {
+  letter-spacing: normal;
+}
+
+table.dataTable thead .sorting:before {
+  content: "\e260";
+  position: absolute;
+  bottom: 12px;
+  right: 8px;
+  display: block;
+  font-family: 'Glyphicons Halflings';
+  opacity: 0.9;
+  color: black;
+}
+
+table.dataTable thead .sorting:after {
+  content: "\e259";
+  opacity: 0.9;
+  color: black;
+  bottom: 4px;
+}
+
+table.dataTable thead .sorting_asc:after {
+  content: "\e260";
+  color: #BE000E;
+  opacity: 0.9;
+}
+
+table.dataTable thead .sorting_desc:after {
+  content: "\e259";
+  color: #BE000E;
+  opacity: 0.9;
+}
+
+#dataTable_wrapper input, #dataTable_wrapper a {
+  border-radius: 0;
 }
 
 h1 {
   color: black;
   font-weight: 600;
+}
+
+.right-btn-wrap {
+  text-align: right;
+  padding: 10px 0;
+}
+
+.btn-black {
+  background-color: #2C3032;
+  color: white;
+  padding: 5px 25px;
+}
+
+.btn-primary {
+  color: white;
+  background: #4D7EC2;
+  border-radius: 0;
+  padding: 6px 20px;
+}
+
+.contentWrap .table-borderless td {
+  border-top: none;
+  padding: 12px 8px;
+}
+
+.contentWrap .table-borderless th {
+  border-bottom: 1px solid black;
+}
+
+.contentWrap .table-borderless .complete {
+  color: #A6A5A6;
+}
+
+td:nth-child(2) {
+  color: #A6A5A6;
 }
 
 .appSettings {
@@ -53,18 +126,12 @@ h1 {
 }
 
 .login-form img {
-  margin: 0 auto;
+  margin: 0 auto 50px;
   width: 100%;
 }
 
 .login-form input, .login-form a {
   border-radius: 0px;
-}
-
-.login-form .btn-black {
-  background-color: #2C3032;
-  color: white;
-  padding: 5px 25px;
 }
 
 .login-form .forgot {
@@ -145,19 +212,19 @@ nav.navbar.navbar-default.navbar-static-top .navbar-divider {
   padding: 30px 0 100px;
 }
 
-.contentWrap ul {
+.contentWrap .landing-list {
   padding: 0;
   list-style-type: none;
   margin-top: 24px;
 }
 
-.contentWrap li {
+.contentWrap .landing-list li {
   display: block;
   font-size: 24px;
   margin: 18px 0;
 }
 
-.contentWrap li:before {
+.contentWrap .landing-list li:before {
   content: "\e258";
   font-family: 'Glyphicons Halflings';
   font-size: 18px;
@@ -168,6 +235,12 @@ nav.navbar.navbar-default.navbar-static-top .navbar-divider {
   color: #BE000E;
 }
 
-.contentWrap li a {
+.contentWrap .landing-list li a {
   color: black;
+}
+
+@media only screen and (max-width: 767px) {
+  .right-btn-wrap {
+    text-align: center;
+  }
 }

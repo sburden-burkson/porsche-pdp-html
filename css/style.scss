@@ -1,15 +1,83 @@
 $lightblack: #2C3032;
+$lightgrey: #A6A5A6;
 $logo-width: 150px;
+
 @font-face {
   font-family: "PorscheNextTT-Bold";
   src: url("../fonts/PorscheNextTT-Bold.ttf");
 }
-* {
+nav, .contentWrap {
   letter-spacing: 1px;
+}
+.dataTables_info {
+  letter-spacing: normal;
+}
+table.dataTable thead {
+  .sorting:before {
+    content:"\e260";
+    position: absolute;
+    bottom: 12px;
+    right: 8px;
+    display: block;
+    font-family: 'Glyphicons Halflings';
+    opacity: 0.9;
+    color: black;
+  }
+  .sorting:after {
+    content:"\e259";
+    opacity: 0.9;
+    color: black;
+    bottom: 4px;
+  }
+  .sorting_asc:after {
+      content: "\e260";
+      color: #BE000E;
+      opacity: 0.9;
+  }
+  .sorting_desc:after {
+      content: "\e259";
+      color: #BE000E;
+      opacity: 0.9;
+  }
+}
+#dataTable_wrapper {
+  input, a {
+    border-radius: 0;
+  }
 }
 h1 {
   color: black;
   font-weight: 600;
+}
+.right-btn-wrap {
+  text-align: right;
+  padding: 10px 0;
+}
+.btn-black {
+  background-color: $lightblack;
+  color: white;
+  padding: 5px 25px;
+}
+.btn-primary {
+  color: white;
+  background: #4D7EC2;
+  border-radius: 0;
+  padding: 6px 20px;
+}
+.contentWrap .table-borderless {
+    td {
+      border-top: none;
+      padding: 12px 8px;
+    }
+    th {
+      border-bottom: 1px solid black;
+    }
+    .complete {
+      color: $lightgrey;
+    }
+}
+td:nth-child(2) {
+  color: $lightgrey;
 }
 .appSettings {
   position: absolute;
@@ -33,7 +101,7 @@ h1 {
 .contentNav {
   margin-bottom: 30px;
   a {
-    color: #A6A5A6;
+    color: $lightgrey;
     font-weight: 300;
   }
 }
@@ -43,16 +111,11 @@ h1 {
   margin: 0 auto;
   max-width: 350px;
   img {
-    margin: 0 auto;
+    margin: 0 auto 50px;
     width: 100%;
   }
   input, a {
     border-radius: 0px;
-  }
-  .btn-black {
-    background-color: $lightblack;
-    color: white;
-    padding: 5px 25px;
   }
   .forgot {
     float: right;
@@ -121,27 +184,32 @@ nav.navbar.navbar-default.navbar-static-top {
 }
 .contentWrap {
   padding: 30px 0 100px;
-    ul {
+    .landing-list {
       padding: 0;
       list-style-type: none;
       margin-top: 24px;
+      li {
+        display: block;
+        font-size: 24px;
+        margin: 18px 0;
+      }
+      li:before {
+        content: "\e258";
+        font-family: 'Glyphicons Halflings';
+        font-size: 18px;
+        float: left;
+        margin-top: 6px;
+        margin-left: -5px;
+        margin-right: 15px;
+        color: #BE000E;
+      }
+      li a {
+        color: black;
+      }
     }
-    li {
-      display: block;
-      font-size: 24px;
-      margin: 18px 0;
-    }
-    li:before {
-      content: "\e258";
-      font-family: 'Glyphicons Halflings';
-      font-size: 18px;
-      float: left;
-      margin-top: 6px;
-      margin-left: -5px;
-      margin-right: 15px;
-      color: #BE000E;
-    }
-    li a {
-      color: black;
-    }
+}
+@media only screen and (max-width: 767px) {
+  .right-btn-wrap {
+    text-align: center;
+  }
 }
