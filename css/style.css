@@ -29,6 +29,7 @@ h1 {
 .appSettings i.glyphicon {
   font-size: 30px;
   font-weight: 600;
+  padding-right: 10px;
 }
 
 .appSettings a:hover {
@@ -92,7 +93,6 @@ nav.navbar.navbar-default.navbar-static-top .navLogo {
   background: white;
   position: relative;
   width: 150px;
-  border-radius: 25%;
   z-index: 999;
 }
 

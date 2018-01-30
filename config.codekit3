@@ -136,12 +136,12 @@
 		"oAP": "\/fonts\/PorscheNextTT-ThinItalic.ttf",
 		"oF": 0
 		},
-	"\/images\/Porsche-Logo.png": {
+	"\/images\/porsche-logo.png": {
 		"ft": 32768,
-		"iS": 175626,
+		"iS": 56607,
 		"oA": 0,
 		"oAP": "\/images\/porsche-logo.png",
-		"oF": 2,
+		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
