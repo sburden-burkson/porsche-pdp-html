@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "PorscheNextTT-Bold";
+  src: url("../fonts/PorscheNextTT-Bold.ttf");
+}
+
+* {
+  letter-spacing: 0.7px;
+}
+
+h1 {
+  color: black;
+}
+
 .login-form {
   position: relative;
   top: 100px;
@@ -46,7 +59,7 @@ nav.navbar.navbar-default.navbar-static-top .navLogo {
   background: white;
   position: relative;
   width: 150px;
-  border-radius: 45%;
+  border-radius: 25%;
   z-index: 999;
 }
 
@@ -81,9 +94,43 @@ nav.navbar.navbar-default.navbar-static-top .navbar-divider {
   }
 }
 
-.porscheBackground {
-  background: url("../images/red-porche.png");
-  background-position: 100% -1px;
-  background-repeat: no-repeat;
-  height: 500px;
+@media only screen and (min-width: 767px) {
+  .porscheBackground {
+    background: url("../images/red-porche.png");
+    background-position: 100% -1px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 500px;
+  }
+}
+
+.contentWrap {
+  padding: 50px 0 100px;
+}
+
+.contentWrap ul {
+  padding: 0;
+  list-style-type: none;
+  margin-top: 24px;
+}
+
+.contentWrap li {
+  display: block;
+  font-size: 24px;
+  margin: 18px 0;
+}
+
+.contentWrap li:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  font-size: 18px;
+  float: left;
+  margin-top: 6px;
+  margin-left: -5px;
+  margin-right: 15px;
+  color: #BE000E;
+}
+
+.contentWrap li a {
+  color: black;
 }

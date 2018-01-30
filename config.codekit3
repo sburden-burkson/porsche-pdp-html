@@ -87,6 +87,48 @@
 		"oAP": "\/fonts\/glyphicons-halflings-regular.woff2",
 		"oF": 0
 		},
+	"\/fonts\/PorscheNextTT-Bold.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/fonts\/PorscheNextTT-Bold.ttf",
+		"oF": 0
+		},
+	"\/fonts\/PorscheNextTT-BoldItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/fonts\/PorscheNextTT-BoldItalic.ttf",
+		"oF": 0
+		},
+	"\/fonts\/PorscheNextTT-Italic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/fonts\/PorscheNextTT-Italic.ttf",
+		"oF": 0
+		},
+	"\/fonts\/PorscheNextTT-Regular.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/fonts\/PorscheNextTT-Regular.ttf",
+		"oF": 0
+		},
+	"\/fonts\/PorscheNextTT-Thin.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/fonts\/PorscheNextTT-Thin.ttf",
+		"oF": 0
+		},
+	"\/fonts\/PorscheNextTT-ThinItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/fonts\/PorscheNextTT-ThinItalic.ttf",
+		"oF": 0
+		},
 	"\/images\/Porsche-Logo.png": {
 		"ft": 32768,
 		"iS": 175626,
