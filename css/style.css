@@ -4,11 +4,44 @@
 }
 
 * {
-  letter-spacing: 0.7px;
+  letter-spacing: 1px;
 }
 
 h1 {
   color: black;
+  font-weight: 600;
+}
+
+.appSettings {
+  position: absolute;
+  bottom: 0;
+}
+
+.appSettings a, .appSettings i {
+  color: black;
+}
+
+.appSettings a {
+  font-size: 20px;
+  vertical-align: top;
+}
+
+.appSettings i.glyphicon {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.appSettings a:hover {
+  text-decoration: none;
+}
+
+.contentNav {
+  margin-bottom: 30px;
+}
+
+.contentNav a {
+  color: #A6A5A6;
+  font-weight: 300;
 }
 
 .login-form {
@@ -94,18 +127,22 @@ nav.navbar.navbar-default.navbar-static-top .navbar-divider {
   }
 }
 
+.porscheBackground {
+  position: relative;
+}
+
 @media only screen and (min-width: 767px) {
   .porscheBackground {
     background: url("../images/red-porche.png");
     background-position: 100% -1px;
     background-repeat: no-repeat;
     background-size: contain;
-    min-height: 500px;
+    min-height: 470px;
   }
 }
 
 .contentWrap {
-  padding: 50px 0 100px;
+  padding: 30px 0 100px;
 }
 
 .contentWrap ul {

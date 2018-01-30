@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "26261",
 "files": {
+	"\/application-page-landing.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/application-page-landing.html",
+		"oF": 0
+		},
 	"\/applications-list.html": {
 		"cB": 0,
 		"ft": 8192,
