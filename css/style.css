@@ -3,7 +3,7 @@
   src: url("../fonts/PorscheNextTT-Bold.ttf");
 }
 
-nav, .contentWrap {
+.contentWrap {
   letter-spacing: 1px;
 }
 
@@ -45,22 +45,51 @@ table.dataTable thead .sorting_desc:after {
   border-radius: 0;
 }
 
+#addUserTable td:nth-child(3) {
+  color: #A6A5A6;
+}
+
 h1 {
   color: black;
   font-weight: 600;
 }
 
 .modal {
-  top: 100px;
+  top: 80px;
+}
+
+.modal .modal-form-search input {
+  border-radius: 0 0 0 0;
 }
 
 .modal-content {
-  padding: 10px 15px;
+  padding: 5px 15px 15px;
   border-radius: 0;
 }
 
 .modal-content form div, .modal-content form .checkbox {
   margin-top: 20px;
+}
+
+.dataTables_wrapper .modal-form-search label, .dataTables_wrapper .modal-form-search div.dataTables_filter input {
+  width: 100%;
+}
+
+.dataTables_wrapper .modal-form-search div.dataTables_filter input {
+  margin-left: 0;
+  border-color: #A6A5A6;
+}
+
+#addUserModal .modal-dialog,
+#addUserModal .modal-content {
+  /* 90% of window height */
+  height: 90%;
+}
+
+.modal-body {
+  /* 100% = dialog height, 120px = header + footer */
+  max-height: calc(100% - 60px);
+  overflow-y: scroll;
 }
 
 .modal-title {
@@ -80,6 +109,26 @@ h1 {
   line-height: 0.65;
 }
 
+#addUserTable_wrapper {
+  padding: 0px 15px 15px;
+  height: inherit;
+}
+
+#addUserModal .modal-body {
+  border: 1px #A6A5A6 solid;
+  padding: 0 15px;
+  margin-top: 10px;
+}
+
+.modal .table-borderless {
+  border-top: none;
+}
+
+.modal .table-borderless td {
+  border-top: none;
+  padding: 12px 8px;
+}
+
 .right-btn-wrap {
   text-align: right;
   padding: 10px 0;
@@ -91,6 +140,14 @@ h1 {
   padding: 5px 25px;
 }
 
+.btn-black:hover, .btn-black:focus, .btn-black:active {
+  color: white;
+}
+
+.btn-black:hover {
+  background-color: #555555;
+}
+
 .btn-primary {
   color: white;
   background: #4D7EC2;
@@ -98,16 +155,25 @@ h1 {
   padding: 6px 20px;
 }
 
-.contentWrap .table-borderless td {
+.btn-default {
+  border-radius: 0;
+  padding: 6px 20px;
+}
+
+.btn .glyphicon {
+  font-weight: 600;
+}
+
+.contentWrap .table-borderless td, .modal .table-borderless td {
   border-top: none;
   padding: 12px 8px;
 }
 
-.contentWrap .table-borderless th {
+.contentWrap .table-borderless th, .modal .table-borderless th {
   border-bottom: 1px solid black;
 }
 
-.contentWrap .table-borderless .complete {
+.contentWrap .table-borderless .complete, .modal .table-borderless .complete {
   color: #A6A5A6;
 }
 

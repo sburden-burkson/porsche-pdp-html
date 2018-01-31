@@ -6,7 +6,7 @@ $logo-width: 150px;
   font-family: "PorscheNextTT-Bold";
   src: url("../fonts/PorscheNextTT-Bold.ttf");
 }
-nav, .contentWrap {
+.contentWrap {
   letter-spacing: 1px;
 }
 .dataTables_info {
@@ -45,19 +45,49 @@ table.dataTable thead {
     border-radius: 0;
   }
 }
+#addUserTable {
+  td:nth-child(3) {
+    color: $lightgrey;
+  }
+}
 h1 {
   color: black;
   font-weight: 600;
 }
 .modal {
-  top: 100px;
+  top: 80px;
+  .modal-form-search input {
+    border-radius: 0 0 0 0;
+  }
 }
 .modal-content {
-  padding: 10px 15px;
+  padding: 5px 15px 15px;
   border-radius: 0;
   form div, form .checkbox {
     margin-top: 20px;
   }
+}
+.dataTables_wrapper .modal-form-search {
+  label, div.dataTables_filter input {
+    width: 100%
+  }
+  div.dataTables_filter input {
+    margin-left: 0;
+    border-color: $lightgrey;
+  }
+}
+#addUserModal {
+  .modal-dialog,
+  .modal-content {
+      /* 90% of window height */
+      height: 90%;
+  }
+}
+
+.modal-body {
+    /* 100% = dialog height, 120px = header + footer */
+    max-height: calc(100% - 60px);
+    overflow-y: scroll;
 }
 .modal-title {
   color: $lightgrey;
@@ -73,6 +103,22 @@ h1 {
     line-height: 0.65;
   }
 }
+#addUserTable_wrapper {
+  padding: 0px 15px 15px;
+  height: inherit;
+}
+#addUserModal .modal-body {
+  border: 1px $lightgrey solid;
+  padding: 0 15px;
+  margin-top: 10px;
+}
+.modal .table-borderless {
+  border-top: none;
+  td {
+    border-top: none;
+    padding: 12px 8px;
+  }
+}
 .right-btn-wrap {
   text-align: right;
   padding: 10px 0;
@@ -82,13 +128,26 @@ h1 {
   color: white;
   padding: 5px 25px;
 }
+.btn-black:hover, .btn-black:focus, .btn-black:active {
+  color: white;
+}
+.btn-black:hover {
+  background-color: #555555;
+}
 .btn-primary {
   color: white;
   background: #4D7EC2;
   border-radius: 0;
   padding: 6px 20px;
 }
-.contentWrap .table-borderless {
+.btn-default {
+  border-radius: 0;
+  padding: 6px 20px;
+}
+.btn .glyphicon {
+  font-weight: 600;
+}
+.contentWrap .table-borderless, .modal .table-borderless {
     td {
       border-top: none;
       padding: 12px 8px;

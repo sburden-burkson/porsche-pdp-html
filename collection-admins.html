@@ -128,7 +128,6 @@
         </form>
       </div>
       <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
         <button type="button" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
       </div>
     </div>
@@ -141,10 +140,11 @@
 	<script src="https://cdn.datatables.net/v/bs/dt-1.10.16/datatables.min.js" type="text/javascript">
 	</script>
 	<script type="text/javascript">
-  // Options to disable sorting and ignore last column
 	  $('#dataTable').dataTable({
+			// Options to ignore last table column if it has 2 columns within it
         "aoColumnDefs": [{
         "aTargets": [2,3],
+				"bSearchable": false,
         "defaultContent": "",
       }]
     });
