@@ -168,6 +168,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/images\/qr-code.jpg": {
+		"ft": 16384,
+		"iS": 332,
+		"oA": 0,
+		"oAP": "\/images\/qr-code.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/images\/red-porche.png": {
 		"ft": 32768,
 		"iS": 485360,
