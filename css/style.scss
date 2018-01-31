@@ -1,5 +1,6 @@
 $lightblack: #2C3032;
-$lightgrey: #A6A5A6;
+$lightgray: #A6A5A6;
+$gray: #4A4A4A;
 $logo-width: 150px;
 
 @font-face {
@@ -8,6 +9,9 @@ $logo-width: 150px;
 }
 .contentWrap {
   letter-spacing: 1px;
+  p {
+    letter-spacing: normal;
+  }
 }
 .dataTables_info {
   letter-spacing: normal;
@@ -47,7 +51,7 @@ table.dataTable thead {
 }
 #addUserTable {
   td:nth-child(3) {
-    color: $lightgrey;
+    color: $lightgray;
   }
 }
 h1 {
@@ -73,7 +77,7 @@ h1 {
   }
   div.dataTables_filter input {
     margin-left: 0;
-    border-color: $lightgrey;
+    border-color: $lightgray;
   }
 }
 #addUserModal {
@@ -90,7 +94,7 @@ h1 {
     overflow-y: scroll;
 }
 .modal-title {
-  color: $lightgrey;
+  color: $lightgray;
   letter-spacing: 1px;
   font-size: 20px;
   font-weight: 400;
@@ -108,7 +112,7 @@ h1 {
   height: inherit;
 }
 #addUserModal .modal-body {
-  border: 1px $lightgrey solid;
+  border: 1px $lightgray solid;
   padding: 0 15px;
   margin-top: 10px;
 }
@@ -132,7 +136,7 @@ h1 {
 }
 .no-radius {
   border-radius: 0 0 0 0 !important;
-  border-color: $lightgrey;
+  border-color: $lightgray;
 }
 .align-left {
   text-align: left;
@@ -142,6 +146,22 @@ h1 {
 }
 .right-btn-wrap {
   padding: 10px 0;
+}
+.btn-gray {
+  background-color: $gray;
+  color: white;
+  padding: 5px 25px;
+  border-radius: 0 0 0 0;
+}
+.btn-lg {
+  padding: 20px 25px;
+  font-weight: 300;
+}
+.btn-gray:hover {
+  background-color: $lightblack;
+}
+.btn-gray:hover, .btn-gray:focus, .btn-gray:active {
+  color: white;
 }
 .btn-black {
   background-color: $lightblack;
@@ -176,11 +196,11 @@ h1 {
       border-bottom: 1px solid black;
     }
     .complete {
-      color: $lightgrey;
+      color: $lightgray;
     }
 }
 td:nth-child(2) {
-  color: $lightgrey;
+  color: $lightgray;
 }
 .appSettings {
   margin-top: 50px;
@@ -203,7 +223,7 @@ td:nth-child(2) {
 .contentNav {
   margin-bottom: 30px;
   a {
-    color: $lightgrey;
+    color: $lightgray;
     font-weight: 300;
   }
 }

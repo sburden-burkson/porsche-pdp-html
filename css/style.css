@@ -7,6 +7,10 @@
   letter-spacing: 1px;
 }
 
+.contentWrap p {
+  letter-spacing: normal;
+}
+
 .dataTables_info {
   letter-spacing: normal;
 }
@@ -158,6 +162,26 @@ h1 {
 
 .right-btn-wrap {
   padding: 10px 0;
+}
+
+.btn-gray {
+  background-color: #4A4A4A;
+  color: white;
+  padding: 5px 25px;
+  border-radius: 0 0 0 0;
+}
+
+.btn-lg {
+  padding: 20px 25px;
+  font-weight: 300;
+}
+
+.btn-gray:hover {
+  background-color: #2C3032;
+}
+
+.btn-gray:hover, .btn-gray:focus, .btn-gray:active {
+  color: white;
 }
 
 .btn-black {
