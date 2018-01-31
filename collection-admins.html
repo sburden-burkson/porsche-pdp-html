@@ -7,7 +7,7 @@
 	<link href="css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css">
 	<link href="https://cdn.datatables.net/v/bs/dt-1.10.16/datatables.min.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" media="screen" rel="stylesheet" title="no title">
-	<title>Application Collections</title>
+	<title>Collection Admins</title>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-static-top">
@@ -43,7 +43,7 @@
 			<div class="contentNav">
 				<a href="#">&lt; Back</a>
 			</div>
-			<h1>iTrainer Workbooks</h1>
+			<h1>Workbook 1 Administrators</h1>
 			<div class="right-btn-wrap">
 				<a class="btn btn-primary" href="#">Add User</a>
 			</div>
@@ -57,37 +57,83 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>
-							<a href="#">Workbook 1</a>
-						</td>
-						<td>1/30/18</td>
-						<td><a href="#">Roles</a></td>
+						<td>John Smith</td>
+						<td>jsmith1</td>
+						<td><a href="#" data-toggle="modal" data-target="#roleModal">Roles</a></td>
             <td><a href="#">Remove</a></td>
 					</tr>
 					<tr>
-						<td>
-							<a href="#">Workbook 2</a>
-						</td>
-						<td>3/3/17</td>
-						<td><a href="#">Roles</a></td>
+						<td>Joe Smith</td>
+						<td>jsmith2</td>
+						<td><a href="#" data-toggle="modal" data-target="#roleModal">Roles</a></td>
             <td><a href="#">Remove</a></td>
 					</tr>
 					<tr>
-						<td>Workbook 3</td>
-						<td>4/30/17</td>
-						<td><a href="#">Roles</a></td>
+						<td>John Mills</td>
+						<td>jsmith</td>
+						<td><a href="#" data-toggle="modal" data-target="#roleModal">Roles</a></td>
             <td><a href="#">Remove</a></td>
 					</tr>
 					<tr>
-						<td>Workbook 4</td>
-						<td>12/30/17</td>
-						<td><a href="#">Roles</a></td>
+						<td>John Doe</td>
+						<td>jdoe</td>
+						<td><a href="#" data-toggle="modal" data-target="#roleModal">Roles</a></td>
             <td><a href="#">Remove</a></td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 	</div>
+  <!-- Modal -->
+<div class="modal fade" id="roleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">John Smith Roles</h4>
+      </div>
+      <div class="modal-body">
+        <p>Select priveleges for this user.</p>
+        <form>
+          <div class="checkbox">
+          <label>
+            <input type="checkbox" value="">
+            <b>Administrator -</b> Full access, including adding other administrators.
+          </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="">
+              <b>Manage Users -</b> Add/remove users.
+            </label>
+          </div>
+          <div class="checkbox">
+          <label>
+            <input type="checkbox" value="">
+            <b>Manage Content -</b> Create, edit, remove workbook content.
+          </label>
+        </div>
+        <div class="checkbox">
+        <label>
+          <input type="checkbox" value="">
+          <b>Quiz Reports -</b> View and export quiz reports.
+        </label>
+            </div>
+            <div class="checkbox">
+            <label>
+              <input type="checkbox" value="">
+              <b>Generate Bundles -</b> Create workbook bundles for registration.
+            </label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 	<script src="js/jquery-3.3.1.min.js" type="text/javascript">
 	</script>
 	<script async src="js/bootstrap.min.js" type="text/javascript">
