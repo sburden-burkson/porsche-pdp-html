@@ -44,6 +44,13 @@
 		"oAP": "\/collection-users-private.html",
 		"oF": 0
 		},
+	"\/collection-users-public.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/collection-users-public.html",
+		"oF": 0
+		},
 	"\/css\/bootstrap.min.css": {
 		"aP": 1,
 		"bl": 0,

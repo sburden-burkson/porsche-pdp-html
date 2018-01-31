@@ -137,8 +137,10 @@ h1 {
 .align-left {
   text-align: left;
 }
+.btn-wrap {
+  padding: 10px 0;
+}
 .right-btn-wrap {
-  text-align: right;
   padding: 10px 0;
 }
 .btn-black {
@@ -181,8 +183,7 @@ td:nth-child(2) {
   color: $lightgrey;
 }
 .appSettings {
-  position: absolute;
-  bottom: 0;
+  margin-top: 50px;
   a, i {
     color: black;
   }
@@ -271,9 +272,9 @@ nav.navbar.navbar-default.navbar-static-top {
     }
   }
 }
-.porscheBackground {
-  position: relative;
-}
+// .porscheBackground {
+//   position: relative;
+// }
 @media only screen and (min-width: 767px) {
   .porscheBackground {
     background: url('../images/red-porche.png');
@@ -310,7 +311,7 @@ nav.navbar.navbar-default.navbar-static-top {
     }
 }
 @media only screen and (max-width: 767px) {
-  .right-btn-wrap {
+  .-wrap {
     text-align: center;
   }
 }
