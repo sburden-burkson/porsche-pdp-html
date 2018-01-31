@@ -47,7 +47,7 @@
 			<div class="right-btn-wrap">
 				<a class="btn btn-primary" href="#" data-toggle="modal" data-target="#addUserModal">Add User</a>
         <a class="btn btn-primary" href="#">Import Users</a>
-        <a class="btn btn-default" href="#"><i class="glyphicon glyphicon-cog"></i> Options</a>
+        <a class="btn btn-default" href="#" data-toggle="modal" data-target="#optionsModal"><i class="glyphicon glyphicon-cog"></i> Options</a>
 			</div>
 			<table class="table table-responsive table-borderless" id="dataTable">
 				<thead>
@@ -82,15 +82,42 @@
 			</table>
 		</div>
 	</div>
-  <!-- Modal -->
-<div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <!-- Options Modal -->
+<div class="modal fade" id="optionsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Options</h4>
+      </div>
+      <div class="modal-body">
+        <p>Workbooks are set to Private by default, allowing you to grant access to specific users. Changing to Public allows all users to access the workbook.</p>
+        <div class="form-group">
+          <label class="radio-inline"><input type="radio" name="permissions">Private</label>
+          <label class="radio-inline"><input type="radio" name="permissions">Public</label>
+        </div>
+        <div class="modal-section">
+          <div class="form-group">
+            <p>You can grant access to groups of users based on Job Role.</p>
+            <input type="text" class="form-control no-radius" placeholder="Job Roles">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer align-left">
+        <p>Export a list of users who currently have access to this workbook.</p>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Export Users</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Add User Modal -->
+<div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">µ
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Add User</h4>
       </div>
-      <!-- <div class="modal-body"> -->
         <table class="table table-responsive table-borderless" id="addUserTable">
   				<thead>
   					<tr>
@@ -187,7 +214,6 @@
   					</tr>
   				</tbody>
   			</table>
-      <!-- </div> -->
     </div>
   </div>
 </div>

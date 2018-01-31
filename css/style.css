@@ -129,6 +129,20 @@ h1 {
   padding: 12px 8px;
 }
 
+.modal-section {
+  padding: 20px 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.no-radius {
+  border-radius: 0 0 0 0 !important;
+  border-color: #A6A5A6;
+}
+
+.align-left {
+  text-align: left;
+}
+
 .right-btn-wrap {
   text-align: right;
   padding: 10px 0;
