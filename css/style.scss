@@ -92,7 +92,6 @@ h1 {
   border-radius: 0 0 0 0;
 }
 .modal-body {
-    /* 100% = dialog height, 120px = header + footer */
     max-height: calc(100% - 60px);
     overflow-y: scroll;
 }
@@ -382,9 +381,6 @@ nav.navbar.navbar-default.navbar-static-top {
     }
   }
 }
-// .porscheBackground {
-//   position: relative;
-// }
 @media only screen and (min-width: 767px) {
   .porscheBackground {
     background: url('../images/red-porche.png');
@@ -419,9 +415,4 @@ nav.navbar.navbar-default.navbar-static-top {
         color: black;
       }
     }
-}
-@media only screen and (max-width: 767px) {
-  .-wrap {
-    text-align: center;
-  }
 }

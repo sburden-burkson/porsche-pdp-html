@@ -18,21 +18,21 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="javascript:void(0)">
           <img alt="Porche Logo" class="navLogo" src="images/porsche-logo.png">
         </a>
 			</div>
 			<div class="navbar-collapse collapse" id="navbar">
 				<ul class="nav navbar-nav navbar-right">
 					<li>
-						<a href="#">Manage Users</a>
+						<a href="manage-users.html">Manage Users</a>
 					</li>
 					<li style="list-style: none"><span class="navbar-divider">|</span></li>
 					<li>
-						<a class="username" href="#">John Smith</a>
+						<a class="username" href="user-profile.html">John Smith</a>
 					</li>
 					<li>
-						<a class="logout" href="#">Logout</a>
+						<a class="logout" href="login.html">Logout</a>
 					</li>
 				</ul>
 			</div><!--/.nav-collapse -->
@@ -41,13 +41,15 @@
 	<div class="container">
 		<div class="contentWrap">
 			<div class="contentNav">
-				<a href="#">&lt; Back</a>
+				<a href="statistics.html">&lt; Back</a>
+				<span> | </span>
+				<a href="user-profile.html">Forward &gt;</a>
 			</div>
 			<h1>Manage Users</h1>
 			<div class="right-btn-wrap">
-				<a class="btn btn-primary" href="#">Create User</a>
-        <a class="btn btn-primary" href="#">PPN Import</a>
-        <a class="btn btn-default" href="#"><i class="glyphicon glyphicon-cog"></i> Options</a>
+				<a class="btn btn-primary" href="javascript:void(0)">Create User</a>
+        <a class="btn btn-primary" href="javascript:void(0)">PPN Import</a>
+        <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#optionsModal"><i class="glyphicon glyphicon-cog"></i> Options</a>
 			</div>
 			<table class="table table-responsive table-borderless" id="dataTable">
 				<thead>
@@ -61,67 +63,95 @@
 					<tr>
 						<td>John Smith</td>
 						<td>jsmith1</td>
-            <td><a href="#">Edit</a></td>
+            <td><a href="user-profile.html">Edit</a></td>
 					</tr>
 					<tr>
 						<td>Joe Smith</td>
 						<td>jsmith2</td>
-            <td><a href="#">Edit</a></td>
+            <td><a href="user-profile.html">Edit</a></td>
 					</tr>
 					<tr>
 						<td>John Mills</td>
 						<td>jsmith</td>
-            <td><a href="#">Edit</a></td>
+            <td><a href="user-profile.html">Edit</a></td>
 					</tr>
 					<tr>
 						<td>John Doe</td>
 						<td>jdoe</td>
-            <td><a href="#">Edit</a></td>
+            <td><a href="user-profile.html">Edit</a></td>
 					</tr>
           <tr>
 						<td>John Smith</td>
 						<td>jsmith1</td>
-            <td><a href="#">Edit</a></td>
+            <td><a href="user-profile.html">Edit</a></td>
 					</tr>
 					<tr>
 						<td>Joe Smith</td>
 						<td>jsmith2</td>
-            <td><a href="#">Edit</a></td>
+            <td><a href="user-profile.html">Edit</a></td>
 					</tr>
 					<tr>
 						<td>John Mills</td>
 						<td>jsmith</td>
-            <td><a href="#">Edit</a></td>
+            <td><a href="user-profile.html">Edit</a></td>
 					</tr>
 					<tr>
 						<td>John Doe</td>
 						<td>jdoe</td>
-            <td><a href="#">Edit</a></td>
+            <td><a href="user-profile.html">Edit</a></td>
 					</tr>
           <tr>
 						<td>John Smith</td>
 						<td>jsmith1</td>
-            <td><a href="#">Edit</a></td>
+            <td><a href="user-profile.html">Edit</a></td>
 					</tr>
 					<tr>
 						<td>Joe Smith</td>
 						<td>jsmith2</td>
-            <td><a href="#">Edit</a></td>
+            <td><a href="user-profile.html">Edit</a></td>
 					</tr>
 					<tr>
 						<td>John Mills</td>
 						<td>jsmith</td>
-            <td><a href="#">Edit</a></td>
+            <td><a href="user-profile.html">Edit</a></td>
 					</tr>
 					<tr>
 						<td>Last Doe</td>
 						<td>jdoe</td>
-            <td><a href="#">Edit</a></td>
+            <td><a href="user-profile.html">Edit</a></td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 	</div>
+	<!-- Options Modal -->
+<div class="modal fade" id="optionsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Options</h4>
+			</div>
+			<div class="modal-body">
+				<p>Workbooks are set to Private by default, allowing you to grant access to specific users. Changing to Public allows all users to access the workbook.</p>
+				<div class="form-group">
+					<label class="radio-inline"><input type="radio" name="permissions">Private</label>
+					<label class="radio-inline"><input type="radio" name="permissions">Public</label>
+				</div>
+				<div class="modal-section">
+					<div class="form-group">
+						<p>You can grant access to groups of users based on Job Role.</p>
+						<input type="text" class="form-control no-radius" placeholder="Job Roles">
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer align-left">
+				<p>Export a list of users who currently have access to this workbook.</p>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Export Users</button>
+			</div>
+		</div>
+	</div>
+</div>
 	<script src="js/jquery-3.3.1.min.js" type="text/javascript">
 	</script>
 	<script src="js/bootstrap.min.js" type="text/javascript">

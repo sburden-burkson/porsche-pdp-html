@@ -96,7 +96,6 @@ h1 {
 }
 
 .modal-body {
-  /* 100% = dialog height, 120px = header + footer */
   max-height: calc(100% - 60px);
   overflow-y: scroll;
 }
@@ -489,10 +488,4 @@ nav.navbar.navbar-default.navbar-static-top .navbar-divider {
 
 .contentWrap .landing-list li a {
   color: black;
-}
-
-@media only screen and (max-width: 767px) {
-  .-wrap {
-    text-align: center;
-  }
 }
