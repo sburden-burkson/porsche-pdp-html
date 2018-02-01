@@ -229,6 +229,13 @@
 		"oA": 0,
 		"oAP": "\/login.html",
 		"oF": 0
+		},
+	"\/statistics.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/statistics.html",
+		"oF": 0
 		}
 	},
 "hooks": [
