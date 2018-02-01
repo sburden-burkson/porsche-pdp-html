@@ -209,6 +209,33 @@ h1 {
 .btn .glyphicon {
   font-weight: 600;
 }
+a svg {
+  fill: #337ab7;
+  margin-left: 8px;
+}
+a svg:focus, a svg:hover {
+  fill: #23527c;
+}
+.user-active {
+  display: inline-block;
+  color: $lightgray;
+}
+.pre {
+  white-space: pre;
+}
+.table-profile {
+  border: 1px solid $lightgray;
+  margin-top: 15px;
+  thead {
+    background-color: #F4F3F4;
+    tr {
+      border: 1px solid $lightgray;
+    }
+    td {
+      padding: 10px;
+    }
+  }
+}
 .contentWrap .table-borderless, .modal .table-borderless {
     td {
       border-top: none;
@@ -221,6 +248,38 @@ h1 {
       color: $lightgray;
     }
 }
+.contentWrap .table-profile {
+  td {
+    vertical-align: middle;
+  }
+  tbody tr:first-of-type td {
+    padding-top: 20px;
+  }
+  tbody tr:last-of-type td {
+    padding-bottom: 20px;
+  }
+  thead td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  tbody td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  td:nth-child(3) {
+    color: $lightgray;
+  }
+}
+@media only screen and (min-width: 767px) {
+  .contentWrap .table-profile {
+    thead td {
+      padding: 15px 25px;
+    }
+    tbody td {
+      padding: 10px 25px;
+    }
+  }
+}
 td:nth-child(2) {
   color: $lightgray;
 }
@@ -229,6 +288,9 @@ td:nth-child(2) {
   h4 {
     margin-bottom: 15px;
   }
+}
+.profile-info {
+  padding: 10px 0 50px;
 }
 .appSettings {
   margin-top: 50px;

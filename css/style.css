@@ -242,6 +242,41 @@ h1 {
   font-weight: 600;
 }
 
+a svg {
+  fill: #337ab7;
+  margin-left: 8px;
+}
+
+a svg:focus, a svg:hover {
+  fill: #23527c;
+}
+
+.user-active {
+  display: inline-block;
+  color: #A6A5A6;
+}
+
+.pre {
+  white-space: pre;
+}
+
+.table-profile {
+  border: 1px solid #A6A5A6;
+  margin-top: 15px;
+}
+
+.table-profile thead {
+  background-color: #F4F3F4;
+}
+
+.table-profile thead tr {
+  border: 1px solid #A6A5A6;
+}
+
+.table-profile thead td {
+  padding: 10px;
+}
+
 .contentWrap .table-borderless td, .modal .table-borderless td {
   border-top: none;
   padding: 12px 8px;
@@ -255,6 +290,41 @@ h1 {
   color: #A6A5A6;
 }
 
+.contentWrap .table-profile td {
+  vertical-align: middle;
+}
+
+.contentWrap .table-profile tbody tr:first-of-type td {
+  padding-top: 20px;
+}
+
+.contentWrap .table-profile tbody tr:last-of-type td {
+  padding-bottom: 20px;
+}
+
+.contentWrap .table-profile thead td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.contentWrap .table-profile tbody td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.contentWrap .table-profile td:nth-child(3) {
+  color: #A6A5A6;
+}
+
+@media only screen and (min-width: 767px) {
+  .contentWrap .table-profile thead td {
+    padding: 15px 25px;
+  }
+  .contentWrap .table-profile tbody td {
+    padding: 10px 25px;
+  }
+}
+
 td:nth-child(2) {
   color: #A6A5A6;
 }
@@ -265,6 +335,10 @@ td:nth-child(2) {
 
 .stat-wrap h4 {
   margin-bottom: 15px;
+}
+
+.profile-info {
+  padding: 10px 0 50px;
 }
 
 .appSettings {
