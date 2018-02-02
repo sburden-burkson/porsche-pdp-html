@@ -129,9 +129,13 @@
            "orderable": false,
            "bSearchable": false,
          }],
+				 language: {
+           search: "",
+           searchPlaceholder: "Users",
+         },
         // "dom": "<'modal-form-search'f><'modal-body't>",
       });
-      // $('#addUserTable_wrapper input').addClass('glyphicon');
+      $('div.dataTables_filter label').addClass('glyphicon glyphicon-search');
     });
 	</script>
 </body>

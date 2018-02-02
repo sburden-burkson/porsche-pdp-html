@@ -167,13 +167,18 @@
           "targets"  : 'no-sort',
           "orderable": false,
           "bSearchable": false,
-        }]
+        }],
+				language: {
+					search: "",
+					searchPlaceholder: "Users",
+				},
         // Default
         // "dom": "<'row'<'col-sm-6'l><'col-sm-6'f>>" +
         //         "<'row'<'col-sm-12'tr>>" +
         //         "<'row'<'col-sm-5'i><'col-sm-7'p>>",
       });
-
+			$('div.dataTables_filter label').addClass('glyphicon glyphicon-search');
+			
       $('#addUserTable').dataTable({
         language: {
           search: "",

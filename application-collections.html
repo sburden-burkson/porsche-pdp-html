@@ -113,7 +113,13 @@
 	<script src="https://cdn.datatables.net/v/bs/dt-1.10.16/datatables.min.js" type="text/javascript">
 	</script>
 	<script type="text/javascript">
-	       $('#dataTable').dataTable();
+	       $('#dataTable').dataTable({
+					 language: {
+	           search: "",
+	           searchPlaceholder: "Users",
+	         },
+				 });
+				 $('div.dataTables_filter label').addClass('glyphicon glyphicon-search');
 	</script>
 </body>
 </html>
