@@ -116,6 +116,7 @@
         <div class="modal-section">
           <div class="form-group">
             <p>You can grant access to groups of users based on Job Role.</p>
+						<label class="glyphicon glyphicon-search glyph-label"></label>
             <input type="text" class="form-control no-radius" placeholder="Job Roles">
           </div>
         </div>
@@ -276,6 +277,7 @@
         "dom": "<'modal-form-search'f><'modal-body't>",
       });
       $('div.dataTables_filter label').addClass('glyphicon glyphicon-search');
+			$(".dataTables_filter input").removeClass("input-sm");
     });
 	</script>
 </body>

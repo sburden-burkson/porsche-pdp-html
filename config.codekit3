@@ -58,6 +58,16 @@
 		"oAP": "\/collection-users-public.html",
 		"oF": 0
 		},
+	"\/css\/bootstrap.min-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/bootstrap.min-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/css\/bootstrap.min.css": {
 		"aP": 1,
 		"bl": 0,
@@ -198,10 +208,20 @@
 		"oA": 0,
 		"oAP": "\/images\/red-porche.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
+		},
+	"\/js\/bootstrap.min-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/bootstrap.min-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"\/js\/bootstrap.min.js": {
 		"ft": 64,
@@ -209,6 +229,16 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/bootstrap.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/js\/jquery-3.3.1.min-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/jquery-3.3.1.min-min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -258,7 +288,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 538940170,
-	"displayValue": "Porche",
+	"displayValue": "porche-pdp-html",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-punDog"
 	},

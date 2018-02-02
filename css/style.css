@@ -82,7 +82,7 @@ h1 {
 
 .dataTables_wrapper .modal-form-search div.dataTables_filter input {
   margin-left: 0;
-  border-color: #A6A5A6;
+  border: 1px solid #A6A5A6;
 }
 
 #addUserModal .modal-dialog,
@@ -138,6 +138,10 @@ h1 {
 #addUserTable_wrapper {
   padding: 0px 15px 15px;
   height: inherit;
+}
+
+#addUserTable_wrapper .glyphicon-search:before {
+  left: 6px;
 }
 
 #addUserModal .modal-body {
@@ -267,13 +271,23 @@ div.dataTables_filter input {
   color: #A6A5A6;
   position: absolute;
   z-index: 2;
-  left: 10px;
+  left: 12px;
   font-size: 15px;
   width: 28px;
   margin-left: -2.5px;
   text-align: center;
   padding: 8px 0;
-  top: 1px;
+  top: 2px;
+}
+
+.glyph-label:before {
+  top: 11px;
+  left: 4px;
+}
+
+.glyph-label + input {
+  padding-left: 30px;
+  border: 1px solid #A6A5A6;
 }
 
 a svg {
