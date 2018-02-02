@@ -46,9 +46,9 @@
 				<a href="collection-users-private.html">Forward &gt;</a>
 			</div>
 			<h1>Workbook 1 Administrators</h1>
-			<div class="right-btn-wrap">
+			<!-- <div class="right-btn-wrap">
 				<a class="btn btn-primary" href="javascript:void(0)">Add User</a>
-			</div>
+			</div> -->
 			<table class="table table-responsive table-borderless" id="dataTable">
 				<thead>
 					<tr>
@@ -153,9 +153,13 @@
 				search: "",
 				searchPlaceholder: "Users",
 			},
+			"dom": "<'row'<'col-sm-8 col-sm-push-4 btns'><'col-sm-4 col-sm-pull-8'f'>>" +
+						 "<'row'<'col-sm-12'tr>>" +
+						 "<'row'<'col-sm-5'i><'col-sm-7'p>>",
     });
 	</script>
 	<script type="text/javascript">
+		$('#dataTable_wrapper .btns').append('<div class="dt-btn-wrap"><a class="btn btn-primary" href="javascript:void(0)">Add User</a></div>');
 		$('div.dataTables_filter label').addClass('glyphicon glyphicon-search');
 		$(".dataTables_filter input").removeClass("input-sm");
 	</script>

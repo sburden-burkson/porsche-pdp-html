@@ -178,14 +178,17 @@ div.dataTables_wrapper div.dataTables_filter input {
   margin: 3px auto;
 }
 .dt-btn-wrap a {
-  margin: 0px 0 5px 5px;
+  margin: 0px 0px 5px 5px;
 }
 .right-btn-wrap, .dt-btn-wrap  {
   text-align: right;
 }
 @media only screen and (max-width: 767px) {
-  .btn-wrap, .right-btn-wrap, .dt-btn-wrap {
-    text-align: center;
+  .dt-btn-wrap {
+    text-align: left;
+  }
+  .dt-btn-wrap a {
+    margin: 0px 5px 5px 0px;
   }
 }
 @media only screen and (min-width: 480px) {
@@ -194,15 +197,12 @@ div.dataTables_wrapper div.dataTables_filter input {
   // }
 }
 @media only screen and (max-width: 480px) {
-  .btn-wrap a, .right-btn-wrap a, .dt-btn-wrap a {
+  .right-btn-wrap a {
     display: block;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
   }
-  .dt-btn-wrap {
-    text-align: center;
- }
 }
 .btn-gray {
   background-color: $gray;
