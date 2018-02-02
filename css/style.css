@@ -132,7 +132,7 @@ h1 {
 .rel .btn-abs-right {
   position: absolute;
   right: 0;
-  top: -4px;
+  top: -7px;
 }
 
 #addUserTable_wrapper {
@@ -178,13 +178,23 @@ h1 {
   text-align: left;
 }
 
-.btn-wrap {
+.btn-wrap, .right-btn-wrap {
   padding: 10px 0;
 }
 
+.btn-wrap a, .right-btn-wrap a {
+  margin: 3px auto;
+}
+
 .right-btn-wrap {
-  padding: 10px 0;
   text-align: right;
+}
+
+@media only screen and (max-width: 480px) {
+  .btn-wrap a, .right-btn-wrap a {
+    display: block;
+    width: 50%;
+  }
 }
 
 .btn-gray {
