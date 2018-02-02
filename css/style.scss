@@ -74,11 +74,13 @@ h1 {
 }
 .dataTables_wrapper .modal-form-search {
   label, div.dataTables_filter input {
-    width: 100%
+    width: 100%;
+    margin-left: 0;
   }
   div.dataTables_filter input {
     margin-left: 0;
     border: 1px solid $lightgray;
+    width: 100%;
   }
 }
 #addUserModal {
@@ -88,8 +90,16 @@ h1 {
       height: 90%;
   }
 }
-.dataTables_filter input {
+div.dataTables_wrapper div.dataTables_filter label {
+  width: 100%;
+}
+div.dataTables_wrapper div.dataTables_filter {
+    text-align: left;
+}
+div.dataTables_wrapper div.dataTables_filter input {
   border-radius: 0 0 0 0;
+  width: 100%;
+  margin-left: 0;
 }
 .modal-body {
     max-height: calc(100% - 60px);
@@ -167,19 +177,32 @@ h1 {
 .btn-wrap a, .right-btn-wrap a {
   margin: 3px auto;
 }
-.right-btn-wrap {
+.dt-btn-wrap a {
+  margin: 0px 0 5px 5px;
+}
+.right-btn-wrap, .dt-btn-wrap  {
   text-align: right;
 }
 @media only screen and (max-width: 767px) {
-  .btn-wrap, .right-btn-wrap {
+  .btn-wrap, .right-btn-wrap, .dt-btn-wrap {
     text-align: center;
   }
 }
+@media only screen and (min-width: 480px) {
+  // .dt-btn-wrap a {
+  //   margin: 2px 0 2px 5px;
+  // }
+}
 @media only screen and (max-width: 480px) {
-  .btn-wrap a, .right-btn-wrap a {
+  .btn-wrap a, .right-btn-wrap a, .dt-btn-wrap a {
     display: block;
     width: 50%;
+    margin-left: auto;
+    margin-right: auto;
   }
+  .dt-btn-wrap {
+    text-align: center;
+ }
 }
 .btn-gray {
   background-color: $gray;
@@ -233,7 +256,7 @@ div.dataTables_filter input {
     color: #A6A5A6;
     position: absolute;
     z-index: 2;
-    left: 12px;
+    left: 7px;
     font-size: 15px;
     width: 28px;
     margin-left: -2.5px;
@@ -387,8 +410,6 @@ nav.navbar.navbar-default.navbar-static-top {
   padding-bottom: 15px;
   a {
     color: black;
-    font-size: 18px;
-    font-weight: 500;
   }
   .navLogo {
     bottom: 21px;

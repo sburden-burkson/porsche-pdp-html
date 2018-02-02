@@ -46,11 +46,6 @@
 				<a href="collection-users-public.html">Forward &gt;</a>
 			</div>
 			<h1>Workbook 1 Users</h1>
-			<div class="btn-wrap">
-				<a class="btn btn-primary" href="javascript:void(0)" data-toggle="modal" data-target="#addUserModal">Add User</a>
-        <a class="btn btn-primary" href="javascript:void(0)">Import Users</a>
-        <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#optionsModal"><i class="glyphicon glyphicon-cog"></i> Options</a>
-			</div>
 			<table class="table table-responsive table-borderless" id="dataTable">
 				<thead>
 					<tr>
@@ -260,10 +255,12 @@
         //         "<'row'<'col-sm-12'tr>>" +
         //         "<'row'<'col-sm-5'i><'col-sm-7'p>>",
 				//Default
-        "dom": "<'row'<'col-sm-6'l><'col-sm-6'f>>" +
+        "dom": "<'row'<'col-sm-8 col-sm-push-4 btns'><'col-sm-4 col-sm-pull-8'f'>>" +
                 "<'row'<'col-sm-12'tr>>" +
                 "<'row'<'col-sm-5'i><'col-sm-7'p>>",
       });
+
+			$('#dataTable_wrapper .btns').append('<div class="dt-btn-wrap"><a class="btn btn-primary" href="javascript:void(0)" data-toggle="modal" data-target="#addUserModal">Add User</a><a class="btn btn-primary" href="javascript:void(0)">Import Users</a><a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#optionsModal"><i class="glyphicon glyphicon-cog"></i> Options</a></div>');
 
       $('#addUserTable').dataTable({
         language: {

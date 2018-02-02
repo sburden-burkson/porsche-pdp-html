@@ -46,9 +46,6 @@
 				<a href="collection-admins.html">Forward &gt;</a>
 			</div>
 			<h1>iTrainer Workbooks</h1>
-			<div class="right-btn-wrap">
-				<a class="btn btn-primary" href="javascript:void(0)">New Workbook</a>
-			</div>
 			<table class="table table-responsive table-borderless" id="dataTable">
 				<thead>
 					<tr>
@@ -116,9 +113,13 @@
 	       $('#dataTable').dataTable({
 					 language: {
 	           search: "",
-	           searchPlaceholder: "Users",
+	           searchPlaceholder: "Workbook",
 	         },
+					 "dom": "<'row'<'col-sm-8 col-sm-push-4 btns'><'col-sm-4 col-sm-pull-8'f'>>" +
+ 	                "<'row'<'col-sm-12'tr>>" +
+ 	                "<'row'<'col-sm-5'i><'col-sm-7'p>>",
 				 });
+				 $('#dataTable_wrapper .btns').append('<div class="dt-btn-wrap"><a class="btn btn-primary" href="javascript:void(0)">New Workbook</a></div>');
 				 $('div.dataTables_filter label').addClass('glyphicon glyphicon-search');
 				 $(".dataTables_filter input").removeClass("input-sm");
 	</script>
