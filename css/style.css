@@ -190,6 +190,12 @@ h1 {
   text-align: right;
 }
 
+@media only screen and (max-width: 767px) {
+  .btn-wrap, .right-btn-wrap {
+    text-align: center;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .btn-wrap a, .right-btn-wrap a {
     display: block;
