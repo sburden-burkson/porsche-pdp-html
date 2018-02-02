@@ -54,7 +54,6 @@
       </div>
       <div class="rel">
         <h4><b>Users</b></h4>
-  			<a class="btn btn-primary btn-abs-right" href="javascript:void(0)">Export List</a>
       </div>
 			<table class="table table-responsive table-borderless" id="statTable">
 				<thead>
@@ -107,20 +106,6 @@
 	</script>
 	<script type="text/javascript">
     $(document).ready(function() {
-  	  // $('#statTable').dataTable({
-      //   // Options to ignore last column in table
-      //   "order": [],
-      //   "columnDefs": [ {
-      //     "targets"  : 'no-sort',
-      //     "orderable": false,
-      //     "bSearchable": false,
-      //   }]
-      //   // Default
-      //   // "dom": "<'row'<'col-sm-6'l><'col-sm-6'f>>" +
-      //   //         "<'row'<'col-sm-12'tr>>" +
-      //   //         "<'row'<'col-sm-5'i><'col-sm-7'p>>",
-      // });
-
       $('#statTable').dataTable({
         // Options to ignore last column in table
          "order": [],
@@ -133,8 +118,17 @@
            search: "",
            searchPlaceholder: "Users",
          },
-        // "dom": "<'modal-form-search'f><'modal-body't>",
+				 // Default
+         // "dom": "<'row'<'col-sm-6'l><'col-sm-6'f>>" +
+         //         "<'row'<'col-sm-12'tr>>" +
+         //         "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+
+				 "dom": "<'row'<'col-sm-8 col-sm-push-4 btns'><'col-sm-4 col-sm-pull-8'f'>>" +
+								"<'row'<'col-sm-12'tr>>" +
+								"<'row'<'col-sm-5'i><'col-sm-7'p>>",
       });
+
+			$('#statTable_wrapper .btns').append('<div class="dt-btn-wrap"><a class="btn btn-primary btn-abs-right" href="javascript:void(0)">Export List</a></div>');
       $('div.dataTables_filter label').addClass('glyphicon glyphicon-search');
 			$(".dataTables_filter input").removeClass("input-sm");
     });
