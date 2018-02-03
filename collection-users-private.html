@@ -334,6 +334,7 @@
           search: "",
           searchPlaceholder: "Users",
         },
+				"ordering": false,
         "columnDefs": [ {
           "targets"  : 'no-search',
           "bSearchable": false,
@@ -344,7 +345,7 @@
       $('div.dataTables_filter label').addClass('glyphicon glyphicon-search');
 			$(".dataTables_filter input").removeClass("input-sm");
 
-			// Function to fix table column widths inside of modal
+			//Function to fix table column widths inside of modal
 			$('html').on('shown.bs.modal', function (e) {
 			  $.fn.dataTable.tables( {visible: true, api: true} ).columns.adjust();
 			});
