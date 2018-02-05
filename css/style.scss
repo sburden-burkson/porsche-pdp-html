@@ -83,7 +83,7 @@ h1 {
     width: 100%;
   }
 }
-#addUserModal {
+#datatableModal {
   .modal-dialog,
   .modal-content {
       height: auto;
@@ -141,7 +141,7 @@ div.dataTables_wrapper div.dataTables_filter input {
     left: 6px;
   }
 }
-#addUserModal .modal-body {
+#datatableModal .modal-body {
   border: 1px $lightgray solid;
   padding: 0 15px;
   margin-top: 10px;
