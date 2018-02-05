@@ -1,20 +1,25 @@
 $lightblack: #2C3032;
-$lightgrey: #A6A5A6;
+$lightgray: #A6A5A6;
+$gray: #4A4A4A;
 $logo-width: 150px;
 
 @font-face {
   font-family: "PorscheNextTT-Bold";
   src: url("../fonts/PorscheNextTT-Bold.ttf");
 }
-nav, .contentWrap {
+.contentWrap {
   letter-spacing: 1px;
+  p {
+    letter-spacing: normal;
+  }
 }
 .dataTables_info {
   letter-spacing: normal;
 }
 table.dataTable thead {
   .sorting:before {
-    content:"\e260";
+    // content:"\e260";
+    content: "";
     position: absolute;
     bottom: 12px;
     right: 8px;
@@ -24,25 +29,53 @@ table.dataTable thead {
     color: black;
   }
   .sorting:after {
-    content:"\e259";
+    // content:"\e259";
+    content: "";
     opacity: 0.9;
     color: black;
     bottom: 4px;
   }
   .sorting_asc:after {
-      content: "\e260";
+      // content: "\e260";
+      content: "";
       color: #BE000E;
       opacity: 0.9;
   }
   .sorting_desc:after {
-      content: "\e259";
+      // content: "\e259";
+      content: "";
       color: #BE000E;
       opacity: 0.9;
   }
 }
+table.dataTable thead .sorting {
+ background-image: url('../images/sort.png');
+ background-repeat: no-repeat;
+ background-size: 21px;
+ background-position-y: 7px;
+}
+
+table.dataTable thead .sorting_asc {
+ background-image: url('../images/red-up.png');
+ background-repeat: no-repeat;
+ background-size: 20px;
+ background-position-y: 9px;
+}
+
+table.dataTable thead .sorting_desc {
+ background-image: url('../images/red-down.png');
+ background-repeat: no-repeat;
+ background-size: 20px;
+ background-position-y: 9px;
+}
 #dataTable_wrapper {
   input, a {
     border-radius: 0;
+  }
+}
+#addUserTable, #statTable {
+  td:nth-child(3) {
+    color: $lightgray;
   }
 }
 h1 {
@@ -50,17 +83,54 @@ h1 {
   font-weight: 600;
 }
 .modal {
-  top: 100px;
+  top: 80px;
+  .modal-form-search input {
+    border-radius: 0 0 0 0;
+    border: $lightgray;
+  }
 }
 .modal-content {
-  padding: 10px 15px;
+  padding: 5px 15px 15px;
   border-radius: 0;
   form div, form .checkbox {
     margin-top: 20px;
   }
 }
+.dataTables_wrapper .modal-form-search {
+  label, div.dataTables_filter input {
+    width: 100%;
+    margin-left: 0;
+  }
+  div.dataTables_filter input {
+    margin-left: 0;
+    border: 1px solid $lightgray;
+    width: 100%;
+  }
+}
+#datatableModal {
+  .modal-dialog,
+  .modal-content {
+      height: auto;
+      max-height: 90%;
+  }
+}
+div.dataTables_wrapper div.dataTables_filter label {
+  width: 100%;
+}
+div.dataTables_wrapper div.dataTables_filter {
+    text-align: left;
+}
+div.dataTables_wrapper div.dataTables_filter input {
+  border-radius: 0 0 0 0;
+  width: 100%;
+  margin-left: 0;
+}
+.modal-body {
+    max-height: calc(100% - 60px);
+    overflow-y: hidden;
+}
 .modal-title {
-  color: $lightgrey;
+  color: $lightgray;
   letter-spacing: 1px;
   font-size: 20px;
   font-weight: 400;
@@ -73,14 +143,117 @@ h1 {
     line-height: 0.65;
   }
 }
-.right-btn-wrap {
-  text-align: right;
+.rel {
+  position: relative;
+  height: auto;
+  margin: 30px 0 20px;
+  .abs-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .btn-abs-right {
+    position: absolute;
+    right: 0;
+    top: -7px;
+  }
+}
+#addUserTable_wrapper {
+  padding: 0px 15px 15px;
+  height: inherit;
+  .glyphicon-search:before {
+    left: 6px;
+  }
+}
+#datatableModal .modal-body {
+  border: 1px $lightgray solid;
+  padding: 0 15px;
+  margin-top: 10px;
+}
+.modal .table-borderless {
+  border-top: none;
+  td {
+    border-top: none;
+    padding: 12px 8px;
+  }
+}
+.center {
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+.qr-wrap img {
+  max-width: 80%;
+}
+.modal-section {
+  padding: 20px 0;
+  border-top: 1px solid #e5e5e5;
+}
+.no-radius {
+  border-radius: 0 0 0 0 !important;
+  border-color: $lightgray;
+}
+.align-left {
+  text-align: left;
+}
+.btn-wrap, .right-btn-wrap {
   padding: 10px 0;
+}
+.btn-wrap a, .right-btn-wrap a {
+  margin: 3px auto;
+}
+.dt-btn-wrap a {
+  margin: 0px 0px 5px 5px;
+}
+.right-btn-wrap, .dt-btn-wrap  {
+  text-align: right;
+}
+@media only screen and (max-width: 767px) {
+  .dt-btn-wrap {
+    text-align: left;
+  }
+  .dt-btn-wrap a {
+    margin: 0px 5px 5px 0px;
+  }
+}
+@media only screen and (min-width: 480px) {
+  // .dt-btn-wrap a {
+  //   margin: 2px 0 2px 5px;
+  // }
+}
+@media only screen and (max-width: 480px) {
+  .right-btn-wrap a {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.btn-gray {
+  background-color: $gray;
+  color: white;
+  padding: 5px 25px;
+  border-radius: 0 0 0 0;
+}
+.btn-lg {
+  padding: 20px 25px;
+  font-weight: 300;
+}
+.btn-gray:hover {
+  background-color: $lightblack;
+}
+.btn-gray:hover, .btn-gray:focus, .btn-gray:active {
+  color: white;
 }
 .btn-black {
   background-color: $lightblack;
   color: white;
   padding: 5px 25px;
+}
+.btn-black:hover, .btn-black:focus, .btn-black:active {
+  color: white;
+}
+.btn-black:hover {
+  background-color: #555555;
 }
 .btn-primary {
   color: white;
@@ -88,7 +261,69 @@ h1 {
   border-radius: 0;
   padding: 6px 20px;
 }
-.contentWrap .table-borderless {
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+  background: #4D7EC2;
+}
+.btn-default {
+  border-radius: 0;
+  padding: 6px 20px;
+}
+.btn .glyphicon {
+  font-weight: 600;
+}
+div.dataTables_filter input {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  padding-left: 30px;
+}
+.glyphicon-search:before {
+    content: "\e003";
+    color: #A6A5A6;
+    position: absolute;
+    z-index: 2;
+    left: 7px;
+    font-size: 15px;
+    width: 28px;
+    margin-left: -2.5px;
+    text-align: center;
+    padding: 8px 0;
+    top: 2px;
+}
+.glyph-label:before {
+  top: 11px;
+  left: 4px;
+}
+.glyph-label + input {
+  padding-left: 30px;
+  border: 1px solid $lightgray;
+}
+a svg {
+  fill: #337ab7;
+  margin-left: 8px;
+}
+a svg:focus, a svg:hover {
+  fill: #23527c;
+}
+.user-active {
+  display: inline-block;
+  color: $lightgray;
+}
+.pre {
+  white-space: pre;
+}
+.table-profile {
+  border: 1px solid $lightgray;
+  margin-top: 15px;
+  thead {
+    background-color: #F4F3F4;
+    tr {
+      border: 1px solid $lightgray;
+    }
+    td {
+      padding: 10px;
+    }
+  }
+}
+.contentWrap .table-borderless, .modal .table-borderless {
     td {
       border-top: none;
       padding: 12px 8px;
@@ -97,15 +332,55 @@ h1 {
       border-bottom: 1px solid black;
     }
     .complete {
-      color: $lightgrey;
+      color: $lightgray;
     }
 }
+.contentWrap .table-profile {
+  td {
+    vertical-align: middle;
+  }
+  tbody tr:first-of-type td {
+    padding-top: 20px;
+  }
+  tbody tr:last-of-type td {
+    padding-bottom: 20px;
+  }
+  thead td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  tbody td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  td:nth-child(3) {
+    color: $lightgray;
+  }
+}
+@media only screen and (min-width: 767px) {
+  .contentWrap .table-profile {
+    thead td {
+      padding: 15px 25px;
+    }
+    tbody td {
+      padding: 10px 25px;
+    }
+  }
+}
 td:nth-child(2) {
-  color: $lightgrey;
+  color: $lightgray;
+}
+.stat-wrap {
+  padding: 10px 0 5px;
+  h4 {
+    margin-bottom: 15px;
+  }
+}
+.profile-info {
+  padding: 10px 0 50px;
 }
 .appSettings {
-  position: absolute;
-  bottom: 0;
+  margin-top: 50px;
   a, i {
     color: black;
   }
@@ -125,7 +400,7 @@ td:nth-child(2) {
 .contentNav {
   margin-bottom: 30px;
   a {
-    color: $lightgrey;
+    color: $lightgray;
     font-weight: 300;
   }
 }
@@ -148,6 +423,9 @@ td:nth-child(2) {
     padding: 5px 0;
   }
 }
+.navbar-default .navbar-collapse {
+  border-color: black;
+}
 nav.navbar.navbar-default.navbar-static-top {
   margin-bottom: 0;
   border-bottom-color: black;
@@ -156,8 +434,6 @@ nav.navbar.navbar-default.navbar-static-top {
   padding-bottom: 15px;
   a {
     color: black;
-    font-size: 18px;
-    font-weight: 500;
   }
   .navLogo {
     bottom: 21px;
@@ -178,9 +454,6 @@ nav.navbar.navbar-default.navbar-static-top {
       left: 50%;
       top: 0px;
       margin-left: -$logo-width/2;
-      .navLogo {
-        background: transparent;
-      }
     }
   }
   @media only screen and (min-width: 767px) {
@@ -193,9 +466,6 @@ nav.navbar.navbar-default.navbar-static-top {
       font-size: 26px;
     }
   }
-}
-.porscheBackground {
-  position: relative;
 }
 @media only screen and (min-width: 767px) {
   .porscheBackground {
@@ -231,9 +501,4 @@ nav.navbar.navbar-default.navbar-static-top {
         color: black;
       }
     }
-}
-@media only screen and (max-width: 767px) {
-  .right-btn-wrap {
-    text-align: center;
-  }
 }

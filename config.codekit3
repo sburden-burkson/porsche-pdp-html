@@ -16,6 +16,13 @@
 		"oAP": "\/application-collections.html",
 		"oF": 0
 		},
+	"\/application-download.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/application-download.html",
+		"oF": 0
+		},
 	"\/application-page-landing.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -30,11 +37,32 @@
 		"oAP": "\/applications-list.html",
 		"oF": 0
 		},
+	"\/build\/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/.gitignore",
+		"oF": 0
+		},
 	"\/collection-admins.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/collection-admins.html",
+		"oF": 0
+		},
+	"\/collection-users-private.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/collection-users-private.html",
+		"oF": 0
+		},
+	"\/collection-users-public.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/collection-users-public.html",
 		"oF": 0
 		},
 	"\/css\/bootstrap.min.css": {
@@ -47,6 +75,13 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"\/css\/bootstrap.min.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/css\/bootstrap.min.css.map",
+		"oF": 0
+		},
 	"\/css\/style.css": {
 		"aP": 1,
 		"bl": 0,
@@ -58,8 +93,8 @@
 		"oS": 3
 		},
 	"\/css\/style.scss": {
-		"aP": 1,
-		"bl": 1,
+		"aP": 0,
+		"bl": 0,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -67,7 +102,7 @@
 		"oA": 0,
 		"oAP": "\/css\/style.css",
 		"oF": 0,
-		"oS": 1,
+		"oS": 0,
 		"uL": 1
 		},
 	"\/fonts\/glyphicons-halflings-regular.eot": {
@@ -161,9 +196,30 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/images\/qr-code.jpg": {
+		"ft": 16384,
+		"iS": 332,
+		"oA": 0,
+		"oAP": "\/images\/qr-code.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/images\/red-down.png": {
+		"ft": 32768,
+		"iS": 3895,
+		"oA": 0,
+		"oAP": "\/images\/red-down.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/images\/red-porche.png": {
 		"ft": 32768,
-		"iS": 485360,
+		"iS": 136869,
 		"oA": 0,
 		"oAP": "\/images\/red-porche.png",
 		"oF": 0,
@@ -172,12 +228,51 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/images\/red-up.png": {
+		"ft": 32768,
+		"iS": 3697,
+		"oA": 0,
+		"oAP": "\/images\/red-up.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/sort.png": {
+		"ft": 32768,
+		"iS": 4140,
+		"oA": 0,
+		"oAP": "\/images\/sort.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/index.html",
+		"oF": 0
+		},
 	"\/js\/bootstrap.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/bootstrap.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/js\/jquery-3.3.1.min-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/jquery-3.3.1.min-min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -192,11 +287,35 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"\/login.html": {
+	"\/js\/table-icon.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/table-icon-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/manage-users.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/login.html",
+		"oAP": "\/manage-users.html",
+		"oF": 0
+		},
+	"\/statistics.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/statistics.html",
+		"oF": 0
+		},
+	"\/user-profile.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/user-profile.html",
 		"oF": 0
 		}
 	},

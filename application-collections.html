@@ -18,21 +18,21 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="javascript:void(0)">
           <img alt="Porche Logo" class="navLogo" src="images/porsche-logo.png">
         </a>
 			</div>
 			<div class="navbar-collapse collapse" id="navbar">
 				<ul class="nav navbar-nav navbar-right">
 					<li>
-						<a href="#">Manage Users</a>
+						<a href="manage-users.html">Manage Users</a>
 					</li>
 					<li style="list-style: none"><span class="navbar-divider">|</span></li>
 					<li>
-						<a class="username" href="#">John Smith</a>
+						<a class="username" href="user-profile.html">John Smith</a>
 					</li>
 					<li>
-						<a class="logout" href="#">Logout</a>
+						<a class="logout" href="index.html">Logout</a>
 					</li>
 				</ul>
 			</div><!--/.nav-collapse -->
@@ -41,12 +41,11 @@
 	<div class="container">
 		<div class="contentWrap">
 			<div class="contentNav">
-				<a href="#">&lt; Back</a>
+				<a href="application-page-landing.html">&lt; Back</a>
+				<span> | </span>
+				<a href="collection-admins.html">Forward &gt;</a>
 			</div>
 			<h1>iTrainer Workbooks</h1>
-			<div class="right-btn-wrap">
-				<a class="btn btn-primary" href="#">New Workbook</a>
-			</div>
 			<table class="table table-responsive table-borderless" id="dataTable">
 				<thead>
 					<tr>
@@ -58,14 +57,14 @@
 				<tbody>
 					<tr>
 						<td>
-							<a href="#">Workbook 1</a>
+							<a href="javascript:void(0)">Workbook 1</a>
 						</td>
 						<td>1/30/18</td>
 						<td class="complete">Downloaded</td>
 					</tr>
 					<tr>
 						<td>
-							<a href="#">Workbook 2</a>
+							<a href="javascript:void(0)">Workbook 2</a>
 						</td>
 						<td>3/3/17</td>
 						<td class="complete">Downloaded</td>
@@ -73,12 +72,12 @@
 					<tr>
 						<td>Workbook 3</td>
 						<td>4/30/17</td>
-						<td>Download</td>
+						<td><a href="javascript:void(0)">Download</a></td>
 					</tr>
 					<tr>
 						<td>Workbook 4</td>
 						<td>12/30/17</td>
-						<td>Download</td>
+						<td><a href="javascript:void(0)">Download</a></td>
 					</tr>
 					<tr>
 						<td>Workbook 5</td>
@@ -93,7 +92,7 @@
 					<tr>
 						<td>Workbook 7</td>
 						<td>12/3/17</td>
-						<td>Download</td>
+						<td><a href="javascript:void(0)">Download</a></td>
 					</tr>
 					<tr>
 						<td>Workbook 8</td>
@@ -104,14 +103,32 @@
 			</table>
 		</div>
 	</div>
-	<script src="js/jquery-3.3.1.min.js" type="text/javascript">
-	</script>
-	<script async src="js/bootstrap.min.js" type="text/javascript">
-	</script>
-	<script src="https://cdn.datatables.net/v/bs/dt-1.10.16/datatables.min.js" type="text/javascript">
-	</script>
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="https://cdn.datatables.net/v/bs/dt-1.10.16/datatables.min.js" type="text/javascript"></script>
+	<script src="js/table-icon.js" type="text/javascript"></script>
 	<script type="text/javascript">
-	       $('#dataTable').dataTable();
+		$('#dataTable').dataTable({
+		 language: {
+		   search: "",
+		   searchPlaceholder: "Workbook",
+		 },
+		 drawCallback: function(settings) {
+		    var pagination = $(this).closest('.dataTables_wrapper').find('.dataTables_paginate');
+		    pagination.toggle(this.api().page.info().pages > 1);
+		  },
+		 // Default
+		 // "dom": "<'row'<'col-sm-6'l><'col-sm-6'f>>" +
+		 //         "<'row'<'col-sm-12'tr>>" +
+		 //         "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+
+		 "dom": "<'row'<'col-sm-8 col-sm-push-4 btns'><'col-sm-4 col-sm-pull-8'f'>>" +
+		          "<'row'<'col-sm-12'tr>>" +
+		          "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+		});
+		$('#dataTable_wrapper .btns').append('<div class="dt-btn-wrap"><a class="btn btn-primary" href="javascript:void(0)">New Workbook</a></div>');
+		$('div.dataTables_filter label').addClass('glyphicon glyphicon-search');
+		$(".dataTables_filter input").removeClass("input-sm");
 	</script>
 </body>
 </html>
