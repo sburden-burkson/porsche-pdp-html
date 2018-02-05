@@ -18,7 +18,8 @@ $logo-width: 150px;
 }
 table.dataTable thead {
   .sorting:before {
-    content:"\e260";
+    // content:"\e260";
+    content: "";
     position: absolute;
     bottom: 12px;
     right: 8px;
@@ -28,21 +29,44 @@ table.dataTable thead {
     color: black;
   }
   .sorting:after {
-    content:"\e259";
+    // content:"\e259";
+    content: "";
     opacity: 0.9;
     color: black;
     bottom: 4px;
   }
   .sorting_asc:after {
-      content: "\e260";
+      // content: "\e260";
+      content: "";
       color: #BE000E;
       opacity: 0.9;
   }
   .sorting_desc:after {
-      content: "\e259";
+      // content: "\e259";
+      content: "";
       color: #BE000E;
       opacity: 0.9;
   }
+}
+table.dataTable thead .sorting {
+ background-image: url('../images/sort.png');
+ background-repeat: no-repeat;
+ background-size: 21px;
+ background-position-y: 7px;
+}
+
+table.dataTable thead .sorting_asc {
+ background-image: url('../images/red-up.png');
+ background-repeat: no-repeat;
+ background-size: 20px;
+ background-position-y: 9px;
+}
+
+table.dataTable thead .sorting_desc {
+ background-image: url('../images/red-down.png');
+ background-repeat: no-repeat;
+ background-size: 20px;
+ background-position-y: 9px;
 }
 #dataTable_wrapper {
   input, a {

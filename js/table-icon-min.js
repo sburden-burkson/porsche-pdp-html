@@ -1,0 +1,1 @@
+$.fn.textWidth=function(){var t=$(this).html(),n="<span>"+t+"</span>";$(this).html(n);var i=$(this).find("span:first").width();return $(this).html(t),i},$("table").on("draw.dt",function(t){$("table thead tr th").each(function(t,n){var i=parseInt($(n).textWidth())+15;$(n).css("background-position-x",i+"px")})});

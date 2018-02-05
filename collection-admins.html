@@ -54,7 +54,9 @@
 					<tr>
 						<th class="col-xs-8">Name</th>
 						<th class="col-xs-2">Username</th>
-						<th class="col-xs-2" colspan="2">Manage</th>
+						<!-- <th class="col-xs-2" colspan="2">Manage</th> -->
+						<th class="col-xs-1 no-sort">Manage</th>
+						<th class="col-xs-1 no-sort"></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -141,32 +143,36 @@
 	</script>
 	<script src="https://cdn.datatables.net/v/bs/dt-1.10.16/datatables.min.js" type="text/javascript">
 	</script>
+	<script src="js/table-icon.js" type="text/javascript"></script>
 	<script type="text/javascript">
-	  $('#dataTable').dataTable({
-			// Options to ignore last table column if it has 2 columns within it
-        "aoColumnDefs": [{
-        "aTargets": [2,3],
-				"bSearchable": false,
-        "defaultContent": "",
-      }],
-			language: {
-				search: "",
-				searchPlaceholder: "Users",
-			},
-			// Default
-			// "dom": "<'row'<'col-sm-6'l><'col-sm-6'f>>" +
-			//         "<'row'<'col-sm-12'tr>>" +
-			//         "<'row'<'col-sm-5'i><'col-sm-7'p>>",
-			
-			"dom": "<'row'<'col-sm-8 col-sm-push-4 btns'><'col-sm-4 col-sm-pull-8'f'>>" +
-						 "<'row'<'col-sm-12'tr>>" +
-						 "<'row'<'col-sm-5'i><'col-sm-7'p>>",
-    });
+		$(document).ready(function() {
+		  $('#dataTable').dataTable({
+				"columnDefs": [ {
+					"targets"  : 'no-sort',
+					"orderable": false,
+					"bSearchable": false,
+				}],
+				language: {
+					search: "",
+					searchPlaceholder: "Users",
+				},
+				// Default
+				// "dom": "<'row'<'col-sm-6'l><'col-sm-6'f>>" +
+				//         "<'row'<'col-sm-12'tr>>" +
+				//         "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+
+				"dom": "<'row'<'col-sm-8 col-sm-push-4 btns'><'col-sm-4 col-sm-pull-8'f'>>" +
+							 "<'row'<'col-sm-12'tr>>" +
+							 "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+	    });
+
+			$('#dataTable_wrapper .btns').append('<div class="dt-btn-wrap"><a class="btn btn-primary" href="javascript:void(0)">Add User</a></div>');
+			$('div.dataTables_filter label').addClass('glyphicon glyphicon-search');
+			$(".dataTables_filter input").removeClass("input-sm");
+		});
 	</script>
 	<script type="text/javascript">
-		$('#dataTable_wrapper .btns').append('<div class="dt-btn-wrap"><a class="btn btn-primary" href="javascript:void(0)">Add User</a></div>');
-		$('div.dataTables_filter label').addClass('glyphicon glyphicon-search');
-		$(".dataTables_filter input").removeClass("input-sm");
+
 	</script>
 </body>
 </html>
