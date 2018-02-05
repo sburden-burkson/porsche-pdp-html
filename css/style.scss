@@ -86,8 +86,8 @@ h1 {
 #addUserModal {
   .modal-dialog,
   .modal-content {
-      /* 90% of window height */
-      height: 90%;
+      height: auto;
+      max-height: 90%;
   }
 }
 div.dataTables_wrapper div.dataTables_filter label {
@@ -103,7 +103,7 @@ div.dataTables_wrapper div.dataTables_filter input {
 }
 .modal-body {
     max-height: calc(100% - 60px);
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 .modal-title {
   color: $lightgray;
