@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "26261",
 "files": {
+	"\/application-collections.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/application-collections.html",
+		"oF": 0
+		},
 	"\/application-download.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -42,6 +49,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/collection-admins.html",
+		"oF": 0
+		},
+	"\/collection-users-private.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/collection-users-private.html",
 		"oF": 0
 		},
 	"\/collection-users-public.html": {
